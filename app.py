@@ -25,7 +25,7 @@ def predict(image_array):
     return [(class_names[i], pred_probs[i]) for i in top_indices]
 
 # UI Title
-st.markdown("<h1 style='text-align: center;'>🌸 Flower Classifier</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'> Flower Classifier</h1>", unsafe_allow_html=True)
 st.write("Upload an image of a flower and the model will try to identify it!")
 
 # Upload UI
@@ -37,10 +37,10 @@ if uploaded_file:
 
     # Show top prediction
     top_prediction = results[0]
-    st.markdown(f"### ✅ Predicted: **{top_prediction[0].capitalize()}** ({top_prediction[1]*100:.2f}%)")
+    st.markdown(f"###  Predicted: **{top_prediction[0].capitalize()}** ({top_prediction[1]*100:.2f}%)")
 
     # Show prediction results
-    st.markdown("<h3 style='font-size: 24px;'>📊 Prediction Results</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='font-size: 24px;'> Prediction Results</h3>", unsafe_allow_html=True)
 
     for flower, score in results:
         st.markdown(f"<p style='font-size:18px;'><strong>{flower.capitalize()}:</strong> {score*100:.2f}%</p>", unsafe_allow_html=True)
